@@ -9,29 +9,47 @@
         <x:String x:Key="SubTitle">System Information:</x:String>
         
         <!-- Font Size -->
-        <x:Double x:Key="H1">32</x:Double>
+        <x:Double x:Key="H1">30</x:Double>
         <x:Double x:Key="Normal">20</x:Double>
         <x:Double x:Key="Small">18</x:Double>
         
+        <!-- Padding -->
+        <x:Double x:Key="PaddingLg">20</x:Double>
+        <x:Double x:Key="PaddingSm">10</x:Double>
+        
         <!-- Color -->
         <Color x:Key="ForeColor">DarkBlue</Color>
-        <Color x:Key="BackColor">#f8f8f8</Color>
+        <Color x:Key="BackColor">LightBlue</Color>
+        <Color x:Key="SoftBackColor">#f8f8f8</Color>
+        
+        <!-- Set up style for specific type -->
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{x:StaticResource ForeColor}"></Setter>
+            <Setter Property="FontSize" Value="{x:StaticResource Normal}"></Setter>
+        </Style>
+
+        <Style x:Key="Header" TargetType="Label"><!-- Specific type with key -->
+            <Setter Property="Background" Value="{x:StaticResource BackColor}"></Setter>
+            <Setter Property="TextColor" Value="{x:StaticResource ForeColor}"></Setter>
+            <Setter Property="FontSize" Value="{x:StaticResource H1}"></Setter>
+            <Setter Property="Padding" Value="{x:StaticResource PaddingSm}"></Setter>
+        </Style>
     </ContentPage.Resources>
 
-    <StackLayout BackgroundColor="{x:StaticResource BackColor}" Padding="20">
-        <Label FontSize="{x:StaticResource H1}" Text="{x:StaticResource SubTitle}" TextColor="{x:StaticResource ForeColor}"></Label>
-        <Label FontSize="{x:StaticResource Normal}" Text="{x:Static sys:Environment.MachineName}"></Label>
-        <Label FontSize="{x:StaticResource Normal}">
+    <StackLayout BackgroundColor="{x:StaticResource SoftBackColor}" Padding="{x:StaticResource PaddingLg}">
+        <Label Text="{x:StaticResource SubTitle}" Style="{StaticResource Header}"></Label>
+        <Label Text="{x:Static sys:Environment.MachineName}"></Label>
+        <Label>
             <Label.Text>
                 <x:Static Member="sys:Environment.UserName"></x:Static>
             </Label.Text>
         </Label>
-        <Button FontSize="{x:StaticResource Normal}" Text="Get OS Version" Clicked="btn_GetOSVersion"></Button>
-        <Label x:Name="lblOSVersion" FontSize="{x:StaticResource Normal}"></Label>
+        <Button Text="Get OS Version" Clicked="btn_GetOSVersion"></Button>
+        <Label x:Name="lblOSVersion"></Label>
         
         <!-- To show the phone type -->
-        <Label FontSize="{x:StaticResource Small}" Text="{ OnPlatform WinUI='Windows', Android='Android', iOS='iOS'  }"></Label>
-        <Label FontSize="{x:StaticResource Small}">
+        <Label Text="{ OnPlatform WinUI='Windows', Android='Android', iOS='iOS'  }"></Label>
+        <Label>
             <Label.Text>
                 <OnIdiom x:TypeArguments="x:String"
                          Desktop="Desktop"
