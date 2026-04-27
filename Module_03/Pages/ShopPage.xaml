@@ -5,6 +5,7 @@
              Title="ShopPage">
     <VerticalStackLayout>
         <Label 
+            x:Name="labelShop"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

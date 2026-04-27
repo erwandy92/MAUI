@@ -21,19 +21,40 @@
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-        private void Setting_Clicked(object sender, EventArgs e)
+        private async void Setting_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//SettingPage");
+            try
+            {
+                await Shell.Current.GoToAsync("//SettingPage");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("錯誤", $"導覽至設定頁時發生錯誤：{ex.Message}", "確定");
+            }
         }
 
-        private void Profile_Clicked(object sender, EventArgs e)
+        private async void Profile_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                await Shell.Current.GoToAsync("//Settings/ProfilePage");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("錯誤", $"導覽至設定頁時發生錯誤：{ex.Message}", "確定");
+            }
         }
 
-        private void Shop_Clicked(object sender, EventArgs e)
+        private async void Shop_Clicked(object sender, EventArgs e)
         {
-
+            try
+            {
+                await Shell.Current.GoToAsync("//ShopPage");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("錯誤", $"導覽至設定頁時發生錯誤：{ex.Message}", "確定");
+            }
         }
     }
 }

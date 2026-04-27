@@ -24,7 +24,7 @@
             ContentTemplate="{DataTemplate Pages:ShopPage}"
             Route="ShopPage" />
 
-        <Tab Title="Setting" Icon="settings.png">
+        <Tab Title="Setting" Icon="settings.png" Route="Settings">
             <ShellContent
                 Title="Profile"
                 Icon="user.png"
