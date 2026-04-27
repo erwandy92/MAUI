@@ -19,6 +19,18 @@
         </Label>
         <Button FontSize="20" Text="Get OS Version" Clicked="btn_GetOSVersion"></Button>
         <Label x:Name="lblOSVersion" FontSize="20"></Label>
+        
+        <!-- To show the phone type -->
+        <Label FontSize="20" Text="{ OnPlatform WinUI='Windows', Android='Android', iOS='iOS'  }"></Label>
+        <Label FontSize="20">
+            <Label.Text>
+                <OnIdiom x:TypeArguments="x:String"
+                         Desktop="Desktop"
+                         Tablet="Tablet"
+                         Phone="Phone">
+                </OnIdiom>
+            </Label.Text>
+        </Label>
     </StackLayout>
 
 </ContentPage>
