@@ -4,11 +4,32 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Module_03"
+    xmlns:Pages="clr-namespace:Module_03.Pages"
+    Shell.FlyoutBehavior="Flyout"
     Title="Module_03">
 
     <ShellContent
         Title="Home"
+        Icon="home.png"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Setting"
+        Icon="settings.png"
+        ContentTemplate="{DataTemplate Pages:SettingPage}"
+        Route="SettingPage" />
+
+    <ShellContent
+        Title="Profile"
+        Icon="user.png"
+        ContentTemplate="{DataTemplate Pages:ProfilePage}"
+        Route="ProfilePage" />
+
+    <ShellContent
+        Title="Shop"
+        Icon="shoping.png"
+        ContentTemplate="{DataTemplate Pages:ShopPage}"
+        Route="ShopPage" />
 
 </Shell>
