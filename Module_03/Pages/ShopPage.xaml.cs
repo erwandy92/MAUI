@@ -7,4 +7,16 @@ public partial class ShopPage : ContentPage
 		InitializeComponent();
         labelShop.Text = Shell.Current.CurrentState.Location.OriginalString;
     }
+
+    private async void Detail_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            await Shell.Current.GoToAsync(nameof(ShopDetails));
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("¿ù»~", ex.Message, "½T©w");
+        }
+    }
 }

@@ -31,7 +31,7 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
 
-            <Button Clicked="Setting_Clicked" Text="Go to Settings" />
+            <Button Clicked="Setting_Clicked" Text="Go to Setting" />
             <Button Clicked="Profile_Clicked" Text="Go to Profile" />
             <Button Clicked="Shop_Clicked" Text="Go to Shop" />
         </VerticalStackLayout>
