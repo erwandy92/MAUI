@@ -9,7 +9,12 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            Window window = new Window(new AppShell());
+            window.Activated += (sender, e) =>
+            {
+                WindowToCenter(window);
+            };
+            return window;
         }
 
         public void WindowToCenter(Window window)
