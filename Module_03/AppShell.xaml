@@ -7,29 +7,46 @@
     xmlns:Pages="clr-namespace:Module_03.Pages"
     Shell.FlyoutBehavior="Flyout"
     Title="Module_03">
+    
+    <!-- To disable the TabBar on the multiple flyout display mode -->
+    <!--Shell.TabBarIsVisible="False"-->
 
-    <ShellContent
-        Title="Home"
-        Icon="home.png"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Image Source="dotnet_bot.png" />
+        </Grid>
+    </Shell.FlyoutHeader>
+    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Home"
+            Icon="home.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
 
-    <ShellContent
-        Title="Setting"
-        Icon="settings.png"
-        ContentTemplate="{DataTemplate Pages:SettingPage}"
-        Route="SettingPage" />
+        <ShellContent
+            Title="Setting"
+            Icon="settings.png"
+            ContentTemplate="{DataTemplate Pages:SettingPage}"
+            Route="SettingPage" />
 
-    <ShellContent
-        Title="Profile"
-        Icon="user.png"
-        ContentTemplate="{DataTemplate Pages:ProfilePage}"
-        Route="ProfilePage" />
+        <ShellContent
+            Title="Profile"
+            Icon="user.png"
+            ContentTemplate="{DataTemplate Pages:ProfilePage}"
+            Route="ProfilePage" />
 
-    <ShellContent
-        Title="Shop"
-        Icon="shoping.png"
-        ContentTemplate="{DataTemplate Pages:ShopPage}"
-        Route="ShopPage" />
+        <ShellContent
+            Title="Shop"
+            Icon="shoping.png"
+            ContentTemplate="{DataTemplate Pages:ShopPage}"
+            Route="ShopPage" />
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <Grid>
+            <Label Text="Copyright © 2026 Erwandy" FontSize="16" Padding="14" HorizontalTextAlignment="Center" />
+        </Grid>
+    </Shell.FlyoutFooter>
 
 </Shell>
