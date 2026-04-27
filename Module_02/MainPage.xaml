@@ -7,22 +7,31 @@
 
     <ContentPage.Resources>
         <x:String x:Key="SubTitle">System Information:</x:String>
+        
+        <!-- Font Size -->
+        <x:Double x:Key="H1">32</x:Double>
+        <x:Double x:Key="Normal">20</x:Double>
+        <x:Double x:Key="Small">18</x:Double>
+        
+        <!-- Color -->
+        <Color x:Key="ForeColor">DarkBlue</Color>
+        <Color x:Key="BackColor">#f8f8f8</Color>
     </ContentPage.Resources>
 
-    <StackLayout>
-        <Label FontSize="28" Text="{x:StaticResource SubTitle}"></Label>
-        <Label FontSize="24" Text="{x:Static Member=sys:Environment.MachineName}"></Label>
-        <Label FontSize="24">
+    <StackLayout BackgroundColor="{x:StaticResource BackColor}" Padding="20">
+        <Label FontSize="{x:StaticResource H1}" Text="{x:StaticResource SubTitle}" TextColor="{x:StaticResource ForeColor}"></Label>
+        <Label FontSize="{x:StaticResource Normal}" Text="{x:Static sys:Environment.MachineName}"></Label>
+        <Label FontSize="{x:StaticResource Normal}">
             <Label.Text>
                 <x:Static Member="sys:Environment.UserName"></x:Static>
             </Label.Text>
         </Label>
-        <Button FontSize="20" Text="Get OS Version" Clicked="btn_GetOSVersion"></Button>
-        <Label x:Name="lblOSVersion" FontSize="20"></Label>
+        <Button FontSize="{x:StaticResource Normal}" Text="Get OS Version" Clicked="btn_GetOSVersion"></Button>
+        <Label x:Name="lblOSVersion" FontSize="{x:StaticResource Normal}"></Label>
         
         <!-- To show the phone type -->
-        <Label FontSize="20" Text="{ OnPlatform WinUI='Windows', Android='Android', iOS='iOS'  }"></Label>
-        <Label FontSize="20">
+        <Label FontSize="{x:StaticResource Small}" Text="{ OnPlatform WinUI='Windows', Android='Android', iOS='iOS'  }"></Label>
+        <Label FontSize="{x:StaticResource Small}">
             <Label.Text>
                 <OnIdiom x:TypeArguments="x:String"
                          Desktop="Desktop"
