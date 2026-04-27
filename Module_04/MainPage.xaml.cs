@@ -19,6 +19,15 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
+            //Reposition the Windows layout
+            Application app = App.Current;
+            if (app is App app1)
+            {
+                var window = app.Windows[0];
+                app1.WindowToCenter(window);
+            }
+
         }
     }
 }
