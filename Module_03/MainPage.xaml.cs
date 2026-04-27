@@ -20,5 +20,20 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void Setting_Clicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//SettingPage");
+        }
+
+        private void Profile_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Shop_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

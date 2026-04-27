@@ -11,7 +11,7 @@
     <!-- To disable the TabBar on the multiple flyout display mode -->
     <!--Shell.TabBarIsVisible="False"-->
 
-    <TabBar>
+    <TabBar Route="Root">
         <ShellContent
             Title="Home"
             Icon="home.png"
