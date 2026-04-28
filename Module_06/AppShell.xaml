@@ -21,4 +21,7 @@
     
     <ShellContent Title="Use Editor" 
         ContentTemplate="{DataTemplate views:UseEditor}" Route="UseEditor"/>
+
+    <ShellContent Title="Use Other Entry" 
+        ContentTemplate="{DataTemplate views:UseOtherEntry}" Route="UseOtherEntry"/>
 </Shell>
