@@ -32,5 +32,10 @@
         Title="UseBorderWithLineJoin"
         ContentTemplate="{DataTemplate views:UseBorderWithLineJoin}"
         Route="UseBorderWithLineJoin" />
+    
+    <ShellContent
+        Title="UseBorderWithDash"
+        ContentTemplate="{DataTemplate views:UseBorderWithDash}"
+        Route="UseBorderWithDash" />
 
 </Shell>

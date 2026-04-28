@@ -74,6 +74,9 @@
 	  <MauiXaml Update="Views\UseBorder.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\UseBorderWithDash.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\UseBorderWithLineJoin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
