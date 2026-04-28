@@ -28,11 +28,11 @@
               DragCompleted="slider1_DragCompleted" >
             </Slider>
         </HorizontalStackLayout>
-        <Label x:Name="sliderResult" Padding="0 0 0 10" />
-        <Label x:Name="sliderAction" Padding="0 0 0 10" />
+        <Label x:Name="sliderResult" Padding="10" />
+        <Label x:Name="sliderAction" Padding="10" />
         
         <!-- Stepper -->
-        <HorizontalStackLayout Margin="10 0 0 0">
+        <HorizontalStackLayout>
             <Label Text="Stepper" Padding="10"></Label>
             <Stepper Minimum="1" Maximum="10" Increment="0.5" ValueChanged="Stepper_ValueChanged"></Stepper>
             <Label x:Name="stepperResult" Padding="10"></Label>
