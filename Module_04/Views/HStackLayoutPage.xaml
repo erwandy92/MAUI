@@ -14,6 +14,7 @@
         <!-- Row 2 -->
         <Label Text="Sushi" BackgroundColor="#FFDFBA"  TextColor="#222" />
         <!-- Row 3 -->
-        <Label Text="Burger" BackgroundColor="#FFFFBA"  TextColor="#222" />
+        <Label Text="Burger" BackgroundColor="#FFFFBA" TextColor="#222" />
+
     </HorizontalStackLayout>
 </ContentPage>
