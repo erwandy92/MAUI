@@ -27,4 +27,7 @@
 
     <ShellContent Title="Use DateTimePicker" 
         ContentTemplate="{DataTemplate views:UseDateTimePicker}" Route="UseDateTimePicker"/>
+
+    <ShellContent Title="Use Activity" 
+        ContentTemplate="{DataTemplate views:UseActivity}" Route="UseActivity"/>
 </Shell>
