@@ -5,104 +5,104 @@
              Title="VStackLayoutPage">
     <VerticalStackLayout Padding="8" Spacing="6">
         <!-- Row 1 -->
-        <Label Text="Pizza" BackgroundColor="#FFB3BA" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Pizza" BackgroundColor="#FFB3BA" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 2 -->
-        <Label Text="Sushi" BackgroundColor="#FFDFBA" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Sushi" BackgroundColor="#FFDFBA" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 3 -->
-        <Label Text="Burger" BackgroundColor="#FFFFBA" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Burger" BackgroundColor="#FFFFBA" Margin="10, 10, 20, 25" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 4 -->
-        <Label Text="Salad" BackgroundColor="#BAFFC9" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Salad" BackgroundColor="#BAFFC9" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 5 -->
-        <Label Text="Pasta" BackgroundColor="#BAE1FF" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Pasta" BackgroundColor="#BAE1FF" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 6 -->
-        <Label Text="Tacos" BackgroundColor="#D1C4E9" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Button Text="Tacos" x:Name="btnChangeMargin" Clicked="btnTacos_Clicked" BackgroundColor="#D1C4E9" HorizontalOptions="Fill" TextColor="#FFF" />
         <!-- Row 7 -->
-        <Label Text="Ramen" BackgroundColor="#F8BBD0" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Button Text="Ramen" x:Name="btnChangePadding" Clicked="btnRamen_Clicked" BackgroundColor="#F8BBD0" HorizontalOptions="Fill" TextColor="#FFF" />
         <!-- Row 8 -->
-        <Label Text="Curry" BackgroundColor="#C8E6C9" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Curry" BackgroundColor="#C8E6C9" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 9 -->
-        <Label Text="Dumplings" BackgroundColor="#FFF9C4" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Dumplings" BackgroundColor="#FFF9C4" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 10 -->
-        <Label Text="Steak" BackgroundColor="#E1BEE7" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Steak" BackgroundColor="#E1BEE7" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 11 -->
-        <Label Text="Pancakes" BackgroundColor="#F0F4C3" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Pancakes" BackgroundColor="#F0F4C3" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 12 -->
-        <Label Text="Waffles" BackgroundColor="#B3E5FC" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Waffles" BackgroundColor="#B3E5FC" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 13 -->
-        <Label Text="Ice Cream" BackgroundColor="#D7CCC8" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Ice Cream" BackgroundColor="#D7CCC8" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 14 -->
-        <Label Text="Chocolate" BackgroundColor="#F5F5F5" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Chocolate" BackgroundColor="#F5F5F5" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 15 -->
-        <Label Text="Donut" BackgroundColor="#FFE0B2" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Donut" BackgroundColor="#FFE0B2" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 16 -->
-        <Label Text="Bagel" BackgroundColor="#FFCCBC" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Bagel" BackgroundColor="#FFCCBC" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 17 -->
-        <Label Text="Sandwich" BackgroundColor="#E6EE9C" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Sandwich" BackgroundColor="#E6EE9C" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 18 -->
-        <Label Text="Hotdog" BackgroundColor="#B2EBF2" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Hotdog" BackgroundColor="#B2EBF2" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 19 -->
-        <Label Text="Nachos" BackgroundColor="#E1F5FE" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Nachos" BackgroundColor="#E1F5FE" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 20 -->
-        <Label Text="Fries" BackgroundColor="#FCE4EC" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Fries" BackgroundColor="#FCE4EC" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 21 -->
-        <Label Text="Kebab" BackgroundColor="#F3E5F5" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Kebab" BackgroundColor="#F3E5F5" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 22 -->
-        <Label Text="Falafel" BackgroundColor="#E8F5E9" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Falafel" BackgroundColor="#E8F5E9" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 23 -->
-        <Label Text="Shakshuka" BackgroundColor="#FFF3E0" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Shakshuka" BackgroundColor="#FFF3E0" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 24 -->
-        <Label Text="Paella" BackgroundColor="#EDE7F6" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Paella" BackgroundColor="#EDE7F6" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 25 -->
-        <Label Text="Risotto" BackgroundColor="#F9FBE7" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Risotto" BackgroundColor="#F9FBE7" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 26 -->
-        <Label Text="Gnocchi" BackgroundColor="#E0F7FA" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Gnocchi" BackgroundColor="#E0F7FA" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 27 -->
-        <Label Text="Burrito" BackgroundColor="#FFF8E1" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Burrito" BackgroundColor="#FFF8E1" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 28 -->
-        <Label Text="Quesadilla" BackgroundColor="#F1F8E9" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Quesadilla" BackgroundColor="#F1F8E9" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 29 -->
-        <Label Text="Samosa" BackgroundColor="#D1F2EB" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Samosa" BackgroundColor="#D1F2EB" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 30 -->
-        <Label Text="Biryani" BackgroundColor="#FFF1F0" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Biryani" BackgroundColor="#FFF1F0" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 31 -->
-        <Label Text="Pho" BackgroundColor="#FBE9E7" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Pho" BackgroundColor="#FBE9E7" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 32 -->
-        <Label Text="Poke" BackgroundColor="#E3F2FD" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Poke" BackgroundColor="#E3F2FD" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 33 -->
-        <Label Text="Ceviche" BackgroundColor="#E8EAF6" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Ceviche" BackgroundColor="#E8EAF6" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 34 -->
-        <Label Text="Lobster" BackgroundColor="#FFFDE7" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Lobster" BackgroundColor="#FFFDE7" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 35 -->
-        <Label Text="Shrimp" BackgroundColor="#E8F5FE" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Shrimp" BackgroundColor="#E8F5FE" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 36 -->
-        <Label Text="Crab" BackgroundColor="#FCEEF3" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Crab" BackgroundColor="#FCEEF3" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 37 -->
-        <Label Text="Oysters" BackgroundColor="#F9EAEF" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Oysters" BackgroundColor="#F9EAEF" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 38 -->
-        <Label Text="Clam Chowder" BackgroundColor="#E9F7EF" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Clam Chowder" BackgroundColor="#E9F7EF" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 39 -->
-        <Label Text="Bruschetta" BackgroundColor="#FFF2E2" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Bruschetta" BackgroundColor="#FFF2E2" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 40 -->
-        <Label Text="Tapas" BackgroundColor="#EDEDED" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Tapas" BackgroundColor="#EDEDED" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 41 -->
-        <Label Text="Crepe" BackgroundColor="#FFE6F0" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Crepe" BackgroundColor="#FFE6F0" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 42 -->
-        <Label Text="Tart" BackgroundColor="#E8F6EF" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Tart" BackgroundColor="#E8F6EF" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 43 -->
-        <Label Text="Muffin" BackgroundColor="#FFF5E1" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Muffin" BackgroundColor="#FFF5E1" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 44 -->
-        <Label Text="Brownie" BackgroundColor="#E6EEF8" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Brownie" BackgroundColor="#E6EEF8" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 45 -->
-        <Label Text="Smoothie" BackgroundColor="#F7FBEF" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Smoothie" BackgroundColor="#F7FBEF" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 46 -->
-        <Label Text="Yogurt" BackgroundColor="#E0F2F1" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Yogurt" BackgroundColor="#E0F2F1" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 47 -->
-        <Label Text="Granola" BackgroundColor="#FFF9F2" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Granola" BackgroundColor="#FFF9F2" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 48 -->
-        <Label Text="Omelette" BackgroundColor="#F1F4E8" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Omelette" BackgroundColor="#F1F4E8" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 49 -->
-        <Label Text="Fajitas" BackgroundColor="#FDEFE8" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Fajitas" BackgroundColor="#FDEFE8" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
         <!-- Row 50 -->
-        <Label Text="Empanada" BackgroundColor="#EAF7FF" Padding="12" Margin="4" HeightRequest="56" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
+        <Label Text="Empanada" BackgroundColor="#EAF7FF" VerticalTextAlignment="Center" HorizontalOptions="Fill" TextColor="#222" />
     </VerticalStackLayout>
 </ContentPage>
