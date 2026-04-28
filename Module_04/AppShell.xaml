@@ -38,5 +38,9 @@
         ContentTemplate="{DataTemplate views:Grid2Page}"
         Route="Grid2Page" />
 
+    <ShellContent
+        Title="FlexLayoutPage"
+        ContentTemplate="{DataTemplate views:FlexLayoutPage}"
+        Route="FlexLayoutPage" />
 
 </Shell>
