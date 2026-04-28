@@ -27,5 +27,10 @@
         Title="VStackLayoutPage"
         ContentTemplate="{DataTemplate views:VStackLayoutPage}"
         Route="VStackLayoutPage" />
+    
+    <ShellContent
+        Title="GridPage"
+        ContentTemplate="{DataTemplate views:GridPage}"
+        Route="GridPage" />
 
 </Shell>
