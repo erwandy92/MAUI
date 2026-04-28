@@ -16,7 +16,11 @@
             <Label Text="Google字體 NotoSerifTC-ExtraBold"  FontSize="32" FontFamily="SerifEB"
                 HorizontalOptions="Center" />
             <Label  Text="Google字體 NotoSerifTC-Black"  FontSize="32" FontFamily="SerifBk" 
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center">
+                <Label.Shadow >
+                    <Shadow Brush="Navy" Offset="20,20" Opacity="0.7"></Shadow>
+                </Label.Shadow>
+            </Label>
             <Label  Text="Google字體 NotoSerifTC-Regular" FontAttributes="Italic" 
                 FontSize="32" FontFamily="SerifR" HorizontalOptions="Center" />
             <Label  Text="Google字體 ZenMaruGothic-Black"  FontSize="32" FontFamily="ZMGB" 
