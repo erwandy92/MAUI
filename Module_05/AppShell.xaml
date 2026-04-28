@@ -18,4 +18,9 @@
         ContentTemplate="{DataTemplate views:BoxViewAndImage}"
         Route="BoxViewAndImage" />
 
+    <ShellContent
+        Title="ScrollViewInGrid"
+        ContentTemplate="{DataTemplate views:ScrollViewInGrid}"
+        Route="ScrollViewInGrid" />
+
 </Shell>
