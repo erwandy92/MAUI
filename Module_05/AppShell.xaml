@@ -37,5 +37,10 @@
         Title="UseBorderWithDash"
         ContentTemplate="{DataTemplate views:UseBorderWithDash}"
         Route="UseBorderWithDash" />
+    
+    <ShellContent
+        Title="UseGradientBrush"
+        ContentTemplate="{DataTemplate views:UseGradientBrush}"
+        Route="UseGradientBrush" />
 
 </Shell>

@@ -80,6 +80,9 @@
 	  <MauiXaml Update="Views\UseBorderWithLineJoin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\UseGradientBrush.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
