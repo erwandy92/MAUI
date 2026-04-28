@@ -24,4 +24,7 @@
 
     <ShellContent Title="Use Other Entry" 
         ContentTemplate="{DataTemplate views:UseOtherEntry}" Route="UseOtherEntry"/>
+
+    <ShellContent Title="Use DateTimePicker" 
+        ContentTemplate="{DataTemplate views:UseDateTimePicker}" Route="UseDateTimePicker"/>
 </Shell>
