@@ -22,5 +22,10 @@
         Title="ScrollViewInGrid"
         ContentTemplate="{DataTemplate views:ScrollViewInGrid}"
         Route="ScrollViewInGrid" />
+    
+    <ShellContent
+        Title="UseBorder"
+        ContentTemplate="{DataTemplate views:UseBorder}"
+        Route="UseBorder" />
 
 </Shell>
