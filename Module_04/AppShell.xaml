@@ -32,5 +32,11 @@
         Title="GridPage"
         ContentTemplate="{DataTemplate views:GridPage}"
         Route="GridPage" />
+    
+    <ShellContent
+        Title="Grid2Page"
+        ContentTemplate="{DataTemplate views:Grid2Page}"
+        Route="Grid2Page" />
+
 
 </Shell>
