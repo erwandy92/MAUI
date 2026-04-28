@@ -4,24 +4,44 @@
              x:Class="Module_05.Views.UseGradientBrush"
              Title="UseGradientBrush">
     <VerticalStackLayout>
-        <Label Text="Gradient" FontSize="24" />
+        <Label Text="線性漸層" FontSize="24"></Label>
         <Grid RowDefinitions="150,150" ColumnDefinitions="1*, 1*">
             <VerticalStackLayout>
+                <Label Text="From Top Left to Bottom Right Corner"></Label>
                 <Border HeightRequest="120" Stroke="Blue" Padding="10" StrokeThickness="3">
                     <Border.Background>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                            <GradientStop Color="Red" Offset="0.0"></GradientStop>
-                            <GradientStop Color="Orange" Offset="0.25"></GradientStop>
-                            <GradientStop Color="Yellow" Offset="0.5"></GradientStop>
-                            <GradientStop Color="Green" Offset="0.75"></GradientStop>
-                            <GradientStop Color="Blue" Offset="1.0"></GradientStop>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" GradientStops="{x:StaticResource rainbowGS}">
                         </LinearGradientBrush>
                     </Border.Background>
                 </Border>
             </VerticalStackLayout>
-            <VerticalStackLayout Grid.Column="1"></VerticalStackLayout>
-            <VerticalStackLayout Grid.Row="1"></VerticalStackLayout>
-            <VerticalStackLayout Grid.Column="1" Grid.Row="1"></VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1">
+                <Label Text="From Top Right to Bottom Left"></Label>
+                <Border HeightRequest="120" Stroke="Blue" Padding="10" StrokeThickness="3">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,1" GradientStops="{x:StaticResource rainbowGS}">
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="1">
+                <Label Text="From Top to Bottom"></Label>
+                <Border HeightRequest="120" Stroke="Blue" Padding="10" StrokeThickness="3">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="1,1" GradientStops="{x:StaticResource rainbowGS}">
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="1">
+                <Label Text="From Left to Right"></Label>
+                <Border HeightRequest="120" Stroke="Blue" Padding="10" StrokeThickness="3">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" GradientStops="{x:StaticResource rainbowGS}">
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+            </VerticalStackLayout>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
