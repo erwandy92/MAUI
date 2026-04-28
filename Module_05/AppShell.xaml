@@ -27,5 +27,10 @@
         Title="UseBorder"
         ContentTemplate="{DataTemplate views:UseBorder}"
         Route="UseBorder" />
+    
+    <ShellContent
+        Title="UseBorderWithLineJoin"
+        ContentTemplate="{DataTemplate views:UseBorderWithLineJoin}"
+        Route="UseBorderWithLineJoin" />
 
 </Shell>
