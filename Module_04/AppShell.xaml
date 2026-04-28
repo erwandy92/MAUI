@@ -42,5 +42,10 @@
         Title="FlexLayoutPage"
         ContentTemplate="{DataTemplate views:FlexLayoutPage}"
         Route="FlexLayoutPage" />
+    
+    <ShellContent
+        Title="AbsoluteLayoutPage"
+        ContentTemplate="{DataTemplate views:AbsoluteLayoutPage}"
+        Route="AbsoluteLayoutPage" />
 
 </Shell>
