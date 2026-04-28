@@ -15,4 +15,7 @@
 
     <ShellContent Title="Use Label" 
         ContentTemplate="{DataTemplate views:UseLabel}" Route="UseLabel"/>
+
+    <ShellContent Title="Use Button" 
+        ContentTemplate="{DataTemplate views:UseButton}" Route="UseButton"/>
 </Shell>
