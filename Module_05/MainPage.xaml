@@ -4,9 +4,12 @@
              x:Class="Module_05.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <Border>
+            <Border.Shadow>
+                <Shadow Brush="Black" Offset="5,5" Radius="3" Opacity="1"></Shadow>
+            </Border.Shadow>
+
+            <VerticalStackLayout Padding="30,0" Spacing="25">
             <Label  Text="Hello, World!"   FontSize="32"
                 HorizontalOptions="Center" />
             <Label  Text="預設中文字體" FontSize="32"
@@ -15,12 +18,9 @@
             <!-- Custom Font Family -->
             <Label Text="Google字體 NotoSerifTC-ExtraBold"  FontSize="32" FontFamily="SerifEB"
                 HorizontalOptions="Center" />
-            <Label  Text="Google字體 NotoSerifTC-Black"  FontSize="32" FontFamily="SerifBk" 
+                <Label  Text="Google字體 NotoSerifTC-Black"  FontSize="32" FontFamily="SerifBk" 
                 HorizontalOptions="Center">
-                <Label.Shadow >
-                    <Shadow Brush="Navy" Offset="20,20" Opacity="0.7"></Shadow>
-                </Label.Shadow>
-            </Label>
+                </Label>
             <Label  Text="Google字體 NotoSerifTC-Regular" FontAttributes="Italic" 
                 FontSize="32" FontFamily="SerifR" HorizontalOptions="Center" />
             <Label  Text="Google字體 ZenMaruGothic-Black"  FontSize="32" FontFamily="ZMGB" 
@@ -35,6 +35,8 @@
             <Label Text="&#xf17a;" FontFamily="FA6BR" FontSize="20"  HorizontalOptions="Center"></Label>
 
         </VerticalStackLayout>
+        </Border>
+        
     </ScrollView>
 
 </ContentPage>
