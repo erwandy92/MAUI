@@ -17,5 +17,10 @@
         Title="Bind With Control"
         ContentTemplate="{DataTemplate views:BindWithControl}"
         Route="BindWithControl" />
+    
+    <ShellContent
+        Title="Binding Mode"
+        ContentTemplate="{DataTemplate views:BindingMode}"
+        Route="BindingMode" />
 
 </Shell>
