@@ -22,5 +22,10 @@
         Title="Binding Mode"
         ContentTemplate="{DataTemplate views:BindingMode}"
         Route="BindingMode" />
+    
+    <ShellContent
+        Title="Source From Model"
+        ContentTemplate="{DataTemplate views:SourceFromModel}"
+        Route="SourceFromModel" />
 
 </Shell>
