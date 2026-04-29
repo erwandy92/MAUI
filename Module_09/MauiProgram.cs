@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using Module_09.ViewModels;
+using Module_09.Views;
 
 namespace Module_09
 {
@@ -18,6 +20,10 @@ namespace Module_09
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            //Added DI Singleton - ViewModel and View
+            builder.Services.AddSingleton<TimeViewModel>();
+            builder.Services.AddSingleton<TimeView>();
 
             return builder.Build();
         }
