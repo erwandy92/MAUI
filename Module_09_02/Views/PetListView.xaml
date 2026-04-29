@@ -12,6 +12,37 @@
             Text="Add"
             Command="{Binding AddCommand}" Margin="5" />
         <CollectionView ItemsSource="{Binding PetList}" EmptyView="No Data"
-                        SelectionMode="None" Grid.Row="1" Grid.ColumnSpan="2"></CollectionView>
+                        SelectionMode="None" Grid.Row="1" Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border x:DataType="m:PetModel">
+                        <VerticalStackLayout Padding="20">
+                            <!-- Circular image: Border with Ellipse stroke shape wrapping the Image -->
+                            <Border Padding="0"
+                                    WidthRequest="120"
+                                    HeightRequest="120"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+                                <Border.StrokeShape>
+                                    <Ellipse />
+                                </Border.StrokeShape>
+                                <Image Source="{Binding PictureUrl}" Aspect="AspectFill" />
+                            </Border>
+
+                            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,0">
+                                <Label FontSize="16" VerticalOptions="Center">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0}-{1}">
+                                            <Binding Path="PetId"></Binding>
+                                            <Binding Path="PetName"></Binding>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>

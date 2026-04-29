@@ -27,7 +27,7 @@ public class PetService : IPetService
 
     public PetService()
     {
-        //RefreshData();
+        RefreshData();
     }
 
     public async Task<int> AddPetAsync(PetModel petModel)
