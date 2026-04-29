@@ -11,16 +11,16 @@
         </Label>
         
         <!-- Fallback -->
-        <Label Text="{Binding Source={x:Reference picker} , Path=SelectedValue, 
+        <!--<Label Text="{Binding Source={x:Reference picker} , Path=SelectedValue, 
                     TargetNullValue='?? SelectedValue ', StringFormat='種類:{0}'}" >
-        </Label>
+        </Label>-->
         
         <Picker x:Name="picker" Title="選取動物種類"></Picker>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Button x:Name="addButton" Text="Add Item"
-                    Margin="3"></Button>
+                    Margin="3" Clicked="addButton_Clicked"></Button>
             <Button x:Name="removeButton" Text="Remove Item"
-                    Margin="3"></Button>
+                    Margin="3" Clicked="removeButton_Clicked"></Button>
         </HorizontalStackLayout>
 
     </VerticalStackLayout>

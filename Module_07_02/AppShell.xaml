@@ -18,4 +18,9 @@
         ContentTemplate="{DataTemplate views:UsePicker}"
         Route="UsePicker" />
 
+    <ShellContent
+        Title="Use Collection View"
+        ContentTemplate="{DataTemplate views:UseCollectionView}"
+        Route="UseCollectionView" />
+
 </Shell>
