@@ -29,14 +29,15 @@
             <Entry Grid.Row="3" Grid.Column="1"  Text="{Binding Pet.PictureUrl}"></Entry>
 
             <Label Grid.Row="4" Text="主人" Style="{x:StaticResource FieldLabel}"></Label>
-            <Entry Grid.Row="4" Grid.Column="1"  Text="{Binding Pet.Owner}"></Entry>
+            <Entry x:Name="ownerEntry" Grid.Row="4" Grid.Column="1"  Text="{Binding Pet.Owner}"></Entry>
 
             <Label Grid.Row="5" Text="收養日期" Style="{x:StaticResource FieldLabel}"></Label>
             <DatePicker x:Name="adopDatePicker" Grid.Row="5" Grid.Column="1" Format="yyyy-MM-dd" Date="{Binding Pet.AdopDate}"></DatePicker>
 
             <Button x:Name="SaveButton" Grid.Row="6" Grid.ColumnSpan="2" 
                     Text="存檔" HorizontalOptions="Center"
-                    Clicked="SaveButton_Clicked"></Button>
+                    Command="{Binding Save}" 
+                    CommandParameter="{Binding Source={x:Reference ownerEntry}, Path=Text}"></Button>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
