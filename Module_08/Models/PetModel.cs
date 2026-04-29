@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,20 @@ using System.Threading.Tasks;
 
 namespace Module_08.Models;
 
-public class PetModel
+public partial class PetModel: ObservableObject
 {
-    public int PetId { get; set; } = 0;
-    public string PetName { get; set; }
-    public string Type { get; set; }
-    public string PictureUrl { get; set; }
-    public string Owner { get; set; }
-    public DateTime AdopDate { get; set; }
-
+    [ObservableProperty]
+    private int petId;
+    [ObservableProperty]
+    private string petName;
+    [ObservableProperty]
+    private string type;
+    [ObservableProperty]
+    private string pictureUrl;
+    [ObservableProperty]
+    private string owner;
+    [ObservableProperty]
+    private DateTime adopDate;
     public override string ToString()
     {
         return $"{Owner} 於 {AdopDate:d} 領養了 {PetId} - {PetName} ";
