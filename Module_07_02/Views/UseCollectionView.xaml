@@ -2,11 +2,42 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Module_07_02.Views.UseCollectionView"
+             
+             xmlns:views="clr-namespace:Module_07_02.Views"
+             xmlns:m="clr-namespace:Module_07_02.Models"
+             x:DataType="views:UseCollectionView"
+
              Title="UseCollectionView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="{Binding Pets.Count, StringFormat='[目前筆數: {0}]' }" 
+                VerticalOptions="Center" ></Label>
+            <Button Text="Add" Clicked="addButton_Clicked" Margin="5" ></Button>
+            <Button Text="Clear All" Clicked="clearButton_Clicked" Margin="5" ></Button>
+        </HorizontalStackLayout>
+
+        <CollectionView ItemsSource="{Binding Pets}" Margin="5" VerticalOptions="FillAndExpand">
+            <CollectionView.Header>
+                <ContentView>
+                    <Label Text="My Header" FontSize="20" HorizontalTextAlignment="Center" Background="LightBlue"></Label>
+                </ContentView>
+            </CollectionView.Header>
+
+            <CollectionView.EmptyView>
+                <ContentView HeightRequest="200">
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <ScrollView>
+                            <Label Text="No Data" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </ContentView>
+            </CollectionView.EmptyView>
+            
+            <CollectionView.Footer>
+                <ContentView>
+                    <Label Text="My Footer" FontSize="20" HorizontalTextAlignment="Center" Background="LightBlue"></Label>
+                </ContentView>
+            </CollectionView.Footer>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>

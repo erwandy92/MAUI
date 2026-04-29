@@ -1,9 +1,35 @@
+using Module_07_02.Models;
+using System.Collections.ObjectModel;
+
 namespace Module_07_02.Views;
 
 public partial class UseCollectionView : ContentPage
 {
+	public ObservableCollection<PetModel> Pets { get; set; } = new();
 	public UseCollectionView()
 	{
 		InitializeComponent();
+		this.BindingContext = this;
 	}
+
+    private void addButton_Clicked(object sender, EventArgs e)
+    {
+        Pets.Add(new PetModel()
+        {
+            PetId = 101,
+            PetName = "Dog1",
+            PictureUrl = "dotnet_bot.jpg",
+            Type = "Dog",
+            Owner = "You",
+            AdopDate = new DateTime(2020, 1, 1)
+        });
+
+
+    }
+
+    private void clearButton_Clicked(object sender, EventArgs e)
+    {
+        Pets.Clear();
+    }
+
 }
