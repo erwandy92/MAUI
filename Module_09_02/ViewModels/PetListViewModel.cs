@@ -54,4 +54,20 @@ public partial class PetListViewModel: ViewModelBase
         await AppShell.Current.GoToAsync(nameof(PetView), param);
     }
 
+    [RelayCommand]
+    public async Task Delete(PetModel pet)
+    {
+        IsRefreshing = true;
+        var alert = await AppShell.Current.DisplayAlert("Delete: ", $"Are you sure to delete {pet}?", "Confirm", "Cancel");
+        if (alert)
+        {
+            var result = await petsService.DeletePetAsync(pet);
+            if(result > 0)
+            {
+                await this.GetPetsAsync();
+            }
+        }
+        IsRefreshing = false;
+    }
+
 }
