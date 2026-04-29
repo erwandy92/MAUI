@@ -16,6 +16,13 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Border x:DataType="m:PetModel">
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding Source={x:Reference this}, Path=BindingContext.EditCommand}" 
+                                CommandParameter="{Binding}">
+                                
+                            </TapGestureRecognizer>
+                        </Border.GestureRecognizers>
                         <VerticalStackLayout Padding="20">
                             <!-- Circular image: Border with Ellipse stroke shape wrapping the Image -->
                             <Border Padding="0"

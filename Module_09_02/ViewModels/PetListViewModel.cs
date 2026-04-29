@@ -46,4 +46,12 @@ public partial class PetListViewModel: ViewModelBase
         IsRefreshing = false;
     }
 
+    [RelayCommand]
+    public async Task Edit(PetModel pet)
+    {
+        var param = new Dictionary<string, object>();
+        param.Add("query1", pet);
+        await AppShell.Current.GoToAsync(nameof(PetView), param);
+    }
+
 }

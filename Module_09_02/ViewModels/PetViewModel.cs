@@ -12,10 +12,11 @@ using System.Windows.Input;
 
 namespace Module_09_02.ViewModels;
 
+[QueryProperty(nameof(Pet), "query1")]
 public partial class PetViewModel : ViewModelBase
 {
     [ObservableProperty]
-    private PetModel pet = new PetModel();
+    private PetModel pet = new();
 
     private readonly IPetService petsService;
     public PetViewModel(IPetService petsService)
