@@ -5,11 +5,12 @@ namespace Module_09_02.Views;
 
 public partial class PetView : ContentPage
 {
-	private readonly PetViewModel _viewModel = new();
-    public PetView()
+	private PetViewModel petViewModel;
+    public PetView(PetViewModel petViewModel)
 	{
 		InitializeComponent();
-		BindingContext = _viewModel;
+		this.petViewModel = petViewModel;
+        BindingContext = petViewModel;
 	}
 
  //   private async void SaveButton_Clicked(object sender, EventArgs e)

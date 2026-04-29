@@ -27,6 +27,9 @@ namespace Module_09_02
             builder.Services.AddSingleton<PetListViewModel>();
             builder.Services.AddSingleton<PetListView>();
 
+            builder.Services.AddTransient<PetViewModel>();
+            builder.Services.AddTransient<PetView>();
+
             return builder.Build();
         }
     }
