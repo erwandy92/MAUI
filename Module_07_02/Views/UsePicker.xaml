@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_07_02.Views.UsePicker"
+             Title="UsePicker">
+ 
+    <VerticalStackLayout HorizontalOptions="Center">
+        <!-- Display Selected Item from Picker-->
+        <Label Text="{Binding Source={x:Reference picker} , Path=SelectedItem, 
+                TargetNullValue='請選擇', StringFormat='種類:{0}'}" >
+        </Label>
+        
+        <!-- Fallback -->
+        <Label Text="{Binding Source={x:Reference picker} , Path=SelectedValue, 
+                    TargetNullValue='?? SelectedValue ', StringFormat='種類:{0}'}" >
+        </Label>
+        
+        <Picker x:Name="picker" Title="選取動物種類"></Picker>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button x:Name="addButton" Text="Add Item"
+                    Margin="3"></Button>
+            <Button x:Name="removeButton" Text="Remove Item"
+                    Margin="3"></Button>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
