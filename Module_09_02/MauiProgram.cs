@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Module_09_02.Services;
+using Module_09_02.ViewModels;
+using Module_09_02.Views;
 
 namespace Module_09_02
 {
@@ -18,6 +21,11 @@ namespace Module_09_02
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<IPetService, PetService>();
+
+            builder.Services.AddSingleton<PetListViewModel>();
+            builder.Services.AddSingleton<PetListView>();
 
             return builder.Build();
         }

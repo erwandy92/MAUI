@@ -36,7 +36,6 @@ public class PetService : IPetService
         petModel.PetId = pets.Count + 1;
         pets.Add(petModel);
         return 1;
-
     }
 
     public async Task<int> DeletePetAsync(PetModel petModel)
@@ -50,20 +49,17 @@ public class PetService : IPetService
             result = 1;
         }
         return result;
-
     }
 
     public async Task<PetModel> GetPetByIdAsync(int id)
     {
         await Task.Delay(50);
         return pets.Find((p) => p.PetId == id);
-
     }
 
     public async Task<List<PetModel>> GetPetsAsync()
     {
         await Task.Delay(500);
-
         return pets;
     }
 
@@ -78,6 +74,5 @@ public class PetService : IPetService
             result = 1;
         }
         return result;
-
     }
 }

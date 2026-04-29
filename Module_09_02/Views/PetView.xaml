@@ -42,7 +42,7 @@
             <Button x:Name="SaveButton" Grid.Row="6" Grid.ColumnSpan="2" 
                       Text="存檔" HorizontalOptions="Center"
                 Command="{Binding SaveCommand}" 
-                    CommandParameter="{Binding Source={x:Reference ownerEntry }, Path=Text}"     ></Button>
+                    CommandParameter="{Binding Source={x:Reference ownerEntry }, Path=Text}"></Button>
         </Grid>
     </VerticalStackLayout>
 

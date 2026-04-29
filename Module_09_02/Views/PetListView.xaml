@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_09_02.Views.PetListView"
+             xmlns:vm="clr-namespace:Module_09_02.ViewModels"
+             xmlns:m="clr-namespace:Module_09_02.Models"
+             x:DataType="vm:PetListViewModel"
+             x:Name="this"
+             Title="{Binding Title}">
+    <Grid ColumnDefinitions="*,*" ColumnSpacing="5" RowDefinitions="auto, *" RowSpacing="0">
+        <Button 
+            Text="Add"
+            Command="{Binding AddCommand}" Margin="5" />
+        <CollectionView ItemsSource="{Binding PetList}" EmptyView="No Data"
+                        SelectionMode="None" Grid.Row="1" Grid.ColumnSpan="2"></CollectionView>
+    </Grid>
+</ContentPage>
