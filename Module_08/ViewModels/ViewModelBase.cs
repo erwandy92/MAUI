@@ -10,6 +10,7 @@ namespace Module_08.ViewModels;
 
 public class ViewModelBase: INotifyPropertyChanged
 {
+    private string _title;
     public event PropertyChangedEventHandler? PropertyChanged;
 
     protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -17,7 +18,6 @@ public class ViewModelBase: INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    private string _title = string.Empty;
     public string Title
     {
         get => _title;

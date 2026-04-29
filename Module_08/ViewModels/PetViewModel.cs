@@ -13,6 +13,7 @@ public class PetViewModel : ViewModelBase
             if (_pet != value)
             {
                 _pet = value;
+                Title = $"寵物: {_pet.PetName}";
                 OnPropertyChanged();
             }
         }
