@@ -18,7 +18,7 @@ public partial class UseCollectionView : ContentPage
         {
             PetId = 101,
             PetName = "Dog1",
-            PictureUrl = "dotnet_bot.jpg",
+            PictureUrl = "dotnet_bot.png",
             Type = "Dog",
             Owner = "You",
             AdopDate = new DateTime(2020, 1, 1)

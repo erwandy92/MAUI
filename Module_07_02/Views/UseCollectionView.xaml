@@ -16,7 +16,7 @@
             <Button Text="Clear All" Clicked="clearButton_Clicked" Margin="5" ></Button>
         </HorizontalStackLayout>
 
-        <CollectionView ItemsSource="{Binding Pets}" Margin="5" VerticalOptions="FillAndExpand">
+        <CollectionView ItemsSource="{Binding Pets}" Margin="5" VerticalOptions="FillAndExpand"  MinimumHeightRequest="500" MaximumHeightRequest="800">
             <CollectionView.Header>
                 <ContentView>
                     <Label Text="My Header" FontSize="20" HorizontalTextAlignment="Center" Background="LightBlue"></Label>
@@ -32,7 +32,40 @@
                     </VerticalStackLayout>
                 </ContentView>
             </CollectionView.EmptyView>
-            
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Margin="5">
+                        <Grid ColumnDefinitions="0.75*,*" x:DataType="m:PetModel">
+                            <Image Source="{Binding PictureUrl}"></Image>
+                            <Grid Grid.Column="1" ColumnDefinitions="0.6*,*" RowDefinitions="1.2*,*,*,*,*">
+                                <Label Grid.ColumnSpan="2" FontSize="20" HorizontalOptions="Center">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="PetId"></Binding>
+                                            <Binding Path="PetName"></Binding>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+
+                                <Label Grid.Row="1" Text="種類" Style="{x:StaticResource FieldLabel}"></Label>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Type}"></Label>
+
+                                <Label Grid.Row="2" Text="照片" Style="{x:StaticResource FieldLabel}"></Label>
+
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding PictureUrl}"></Label>
+
+                                <Label Grid.Row="3" Text="主人" Style="{x:StaticResource FieldLabel}"></Label>
+                                <Label x:Name="ownerEntry" Grid.Row="3" Grid.Column="1" Text="{Binding Owner}"></Label>
+
+                                <Label Grid.Row="4" Text="收養日期" Style="{x:StaticResource FieldLabel}" ></Label>
+                                <Label Grid.Row="4" Grid.Column="1" Text="{Binding AdopDate, StringFormat='{0:yyyy-MM-dd}'}" ></Label>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
             <CollectionView.Footer>
                 <ContentView>
                     <Label Text="My Footer" FontSize="20" HorizontalTextAlignment="Center" Background="LightBlue"></Label>
