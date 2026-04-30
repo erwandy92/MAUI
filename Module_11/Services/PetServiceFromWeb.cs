@@ -10,13 +10,13 @@ namespace Module_11.Services;
 
 public class PetServiceFromWeb : IPetService
 {
-    //static readonly string baseURL =
-    //    DeviceInfo.Platform == DevicePlatform.Android ?
-    //    "http://10.0.2.2/un498api/pets/" : "http://localhost/un498api/pets/";
-
     static readonly string baseURL =
         DeviceInfo.Platform == DevicePlatform.Android ?
-        "https://10.0.2.2:7100/un498api/pets/" : "https://localhost:7100/un498api/pets/";
+        "http://10.0.2.2/un498api/pets/" : "http://localhost/un498api/pets/";
+
+    //static readonly string baseURL =
+    //    DeviceInfo.Platform == DevicePlatform.Android ?
+    //    "https://10.0.2.2:7115/un498api/pets/" : "https://localhost:7115/un498api/pets/";
 
     static readonly HttpClient httpClient;
 
@@ -43,15 +43,41 @@ public class PetServiceFromWeb : IPetService
     }
 
 
-    public Task<int> AddPetAsync(PetModel petModel)
+    public async Task<int> AddPetAsync(PetModel petModel)
     {
-        throw new NotImplementedException();
+        var result = 0;
+        if (!IsInternet()) return result;
+        try
+        {
+            var response = await httpClient.PostAsJsonAsync<PetModel>("", petModel);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (Exception ex)
+        {
+            await AppShell.Current.DisplayAlert("Error", $"{ex.Message}", "OK");
+        }
+        return result;
+
     }
 
-    public Task<int> DeletePetAsync(PetModel petModel)
+    public async Task<int> DeletePetAsync(PetModel petModel)
     {
-        throw new NotImplementedException();
+        var result = 0;
+        if (!IsInternet()) return result;
+        try
+        {
+            var response = await httpClient.DeleteAsync($"{petModel.PetId}");
+            response.EnsureSuccessStatusCode();
+            result = 1;
+        }
+        catch (Exception ex)
+        {
+            await AppShell.Current.DisplayAlert("Error", $"{ex.Message}", "OK");
+        }
+        return result;
+
     }
+
 
     public async Task<List<PetModel>> GetPetsAsync()
     {
@@ -84,8 +110,23 @@ public class PetServiceFromWeb : IPetService
     }
 
 
-    public Task<int> UpdatePetAsync(PetModel petModel)
+    public async Task<int> UpdatePetAsync(PetModel petModel)
     {
-        throw new NotImplementedException();
+        var result = 0;
+        if (!IsInternet()) return result;
+        try
+        {
+            var response =
+                await httpClient.PutAsJsonAsync<PetModel>(petModel.PetId.ToString(), petModel);
+            response.EnsureSuccessStatusCode();
+            result = 1;
+        }
+        catch (Exception ex)
+        {
+            await AppShell.Current.DisplayAlert("Error", $"{ex.Message}", "OK");
+        }
+        return result;
+
     }
+
 }
