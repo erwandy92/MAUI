@@ -22,7 +22,8 @@ namespace Module_11
     		builder.Logging.AddDebug();
 #endif
 
-            builder.Services.AddSingleton<IPetService, PetService>();
+            //builder.Services.AddSingleton<IPetService, PetService>();
+            builder.Services.AddSingleton<IPetService, PetServiceFromWeb>();
 
             builder.Services.AddSingleton<PetListViewModel>();
             builder.Services.AddSingleton<PetListView>();
