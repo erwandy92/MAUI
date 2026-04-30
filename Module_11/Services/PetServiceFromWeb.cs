@@ -10,13 +10,15 @@ namespace Module_11.Services;
 
 public class PetServiceFromWeb : IPetService
 {
+#if DEBUG
     static readonly string baseURL =
         DeviceInfo.Platform == DevicePlatform.Android ?
         "http://10.0.2.2/un498api/pets/" : "http://localhost/un498api/pets/";
-
-    //static readonly string baseURL =
-    //    DeviceInfo.Platform == DevicePlatform.Android ?
-    //    "https://10.0.2.2:7115/un498api/pets/" : "https://localhost:7115/un498api/pets/";
+#else
+    static readonly string baseURL =
+        DeviceInfo.Platform == DevicePlatform.Android ?
+        "https://10.0.2.2:7115/un498api/pets/" : "https://localhost:7115/un498api/pets/";
+#endif
 
     static readonly HttpClient httpClient;
 

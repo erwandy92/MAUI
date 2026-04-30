@@ -9,7 +9,7 @@ using Module_10_API.Models;
 
 namespace Module_10_API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PetsController : ControllerBase
     {
