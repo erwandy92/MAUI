@@ -10,14 +10,21 @@ namespace Module_11.Services;
 
 public class PetServiceFromWeb : IPetService
 {
+    //static readonly string baseURL =
+    //    DeviceInfo.Platform == DevicePlatform.Android ?
+    //    "http://10.0.2.2/un498api/pets/" : "http://localhost/un498api/pets/";
+
     static readonly string baseURL =
         DeviceInfo.Platform == DevicePlatform.Android ?
-        "http://10.0.2.2/un498api/pets/" : "http://localhost/un498api/pets/";
+        "https://10.0.2.2:7100/un498api/pets/" : "https://localhost:7100/un498api/pets/";
+
     static readonly HttpClient httpClient;
 
     static PetServiceFromWeb()
     {
-        httpClient = new();
+        //httpClient = new();
+        HttpsClientHandlerService handler = new HttpsClientHandlerService();
+        httpClient = new HttpClient(handler.GetPlatformMessageHandler());
 
         httpClient.BaseAddress = new Uri(baseURL);
         httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
