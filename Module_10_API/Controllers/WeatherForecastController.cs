@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Module_10_API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("wf")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -28,6 +28,29 @@ namespace Module_10_API.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<string> Get(int id)
+        {
+            if(id >= Summaries.Length)
+                return NotFound();
+            return Summaries[id];
+        }
+
+        [Route("birthday/{year}/{month}/{day}")]
+        [HttpGet()]
+        public ActionResult<string> Get(int year, int month, int day)
+        {
+            return (new DateTime(year, month, day)).ToString();
+        }
+
+        [HttpPost()]
+        public ActionResult<string> POST(WeatherForecast wf)
+        {
+            var result = $"POST> Date: {wf.Date}, C: {wf.TemperatureC}, F: {wf.TemperatureF}, Summary: {wf.Summary}";
+            Console.WriteLine(result);
+            return result;
         }
     }
 }
