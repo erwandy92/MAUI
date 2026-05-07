@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_04.Views.GridPage"
+             Title="GridPage">
+    <Grid RowDefinitions="50,50,50" ColumnDefinitions="50,50,50">
+        <Label  
+            Background="Navy"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="1" />
+        <Label  
+            Grid.Row="1"
+            Background="BlueViolet"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="2" />
+        <Label  
+            Grid.Row="2"
+            Background="LightBlue"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="3" />
+
+        <Label  
+            Grid.Column="1"
+            Background="LightCoral"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="4" />
+        <Label  
+            Grid.Column="1"
+            Grid.Row="1"
+            Background="DarkOrange"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="5" />
+        <Label  
+            Grid.Column="1"
+            Grid.Row="2"
+            Background="DarkRed"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="6" />
+
+        <Label  
+            Grid.Column="2"
+            Background="Red"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="7" /> 
+        <Label  
+            Grid.Column="2"
+            Grid.Row="1"
+            Background="ForestGreen"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="8" />
+        <Label  
+            Grid.Column="2"
+            Grid.Row="2"
+            Background="Fuchsia"
+            FontSize="30"
+            TextColor="#FFF"
+            Text="9" />
+    </Grid>
+</ContentPage>

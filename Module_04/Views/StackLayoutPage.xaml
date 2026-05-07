@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_04.Views.StackLayoutPage"
+             Title="StackLayoutPage">
+    <StackLayout x:Name="stack1" Padding="8" Spacing="6" Orientation="Horizontal">
+        <Button x:Name="btnChangeLayout" Clicked="btnChangeLayout_Clicked" 
+                Text="Change LayoutOption" BackgroundColor="Red" />
+
+        <!-- Row 1 -->
+        <Label Text="Pizza" x:Name="lblPizza" BackgroundColor="#FFB3BA"  TextColor="#222" />
+        <!-- Row 2 -->
+        <Label Text="Sushi" x:Name="lblSushi" BackgroundColor="#FFDFBA"  TextColor="#222" />
+        <!-- Row 3 -->
+        <Label Text="Burger" x:Name="lblBurger" BackgroundColor="#FFFFBA"  TextColor="#222" />
+
+        <Label Text="Pasta" x:Name="lblPasta" BackgroundColor="#BAE1FF" TextColor="#222" />
+    </StackLayout>
+</ContentPage>

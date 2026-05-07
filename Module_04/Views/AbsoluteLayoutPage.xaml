@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_04.Views.AbsoluteLayoutPage"
+             Title="AbsoluteLayoutPage">
+    <VerticalStackLayout>
+        <AbsoluteLayout>
+            <!-- LayoutBounds: { x, y, width, height } -->
+            <Label  AbsoluteLayout.LayoutBounds="50,10,400,200"
+                    Text="Layout 1" FontSize="20" BackgroundColor="DarkBlue" TextColor="#FFF" />
+            <Label  AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                    AbsoluteLayout.LayoutFlags="SizeProportional"
+                    Text="Layout 2"  FontSize="20" BackgroundColor="SkyBlue"/>
+        </AbsoluteLayout>
+    </VerticalStackLayout>
+</ContentPage>
