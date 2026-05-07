@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Module_06.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Module_06"
+    xmlns:views="clr-namespace:Module_06.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Module_06">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent Title="Use Label" 
+        ContentTemplate="{DataTemplate views:UseLabel}" Route="UseLabel"/>
+
+    <ShellContent Title="Use Button" 
+        ContentTemplate="{DataTemplate views:UseButton}" Route="UseButton"/>
+    
+    <ShellContent Title="Use Editor" 
+        ContentTemplate="{DataTemplate views:UseEditor}" Route="UseEditor"/>
+
+    <ShellContent Title="Use Other Entry" 
+        ContentTemplate="{DataTemplate views:UseOtherEntry}" Route="UseOtherEntry"/>
+
+    <ShellContent Title="Use DateTimePicker" 
+        ContentTemplate="{DataTemplate views:UseDateTimePicker}" Route="UseDateTimePicker"/>
+
+    <ShellContent Title="Use Activity" 
+        ContentTemplate="{DataTemplate views:UseActivity}" Route="UseActivity"/>
+</Shell>
