@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_07.Views.SourceFromModel"
+             xmlns:m="clr-namespace:Mod071.Models"
+             x:DataType="m:Employee"
+             Title="SourceFromModel">
+
+    <!-- 
+        //To allow the Intellisense to work while binding data {B}
+        xmlns:m="clr-namespace:Mod071.Models"
+        x:DataType="m:Employee"
+    -->
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="ID" Margin="10"></Label>
+            <Label Text="{Binding Id}"  Margin="10"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Name" Margin="10"></Label>
+            <Entry Text="{Binding Name}"></Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="HireDate" Margin="10"></Label>
+            <DatePicker Date="{Binding HireDate}" Format="yyyy-MM-dd"></DatePicker>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Salary" Margin="10"></Label>
+            <Entry Text="{Binding Salary}" Keyboard="Numeric"></Entry>
+        </HorizontalStackLayout>
+
+        <Button x:Name="showButton" Text="Show" Clicked="showButton_Clicked" Margin="10"></Button>
+        <Button x:Name="refreshButton" Text="Refresh" Clicked="refreshButton_Clicked" Margin="10"></Button>
+    </VerticalStackLayout>
+</ContentPage>
