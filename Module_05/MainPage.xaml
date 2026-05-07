@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module_05.MainPage">
+
+    <ScrollView>
+        <Border>
+            <Border.Shadow>
+                <Shadow Brush="Black" Offset="5,5" Radius="3" Opacity="1"></Shadow>
+            </Border.Shadow>
+
+            <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Label  Text="Hello, World!"   FontSize="32"
+                HorizontalOptions="Center" />
+            <Label  Text="預設中文字體" FontSize="32"
+                HorizontalOptions="Center" />
+            
+            <!-- Custom Font Family -->
+            <Label Text="Google字體 NotoSerifTC-ExtraBold"  FontSize="32" FontFamily="SerifEB"
+                HorizontalOptions="Center" />
+                <Label  Text="Google字體 NotoSerifTC-Black"  FontSize="32" FontFamily="SerifBk" 
+                HorizontalOptions="Center">
+                </Label>
+            <Label  Text="Google字體 NotoSerifTC-Regular" FontAttributes="Italic" 
+                FontSize="32" FontFamily="SerifR" HorizontalOptions="Center" />
+            <Label  Text="Google字體 ZenMaruGothic-Black"  FontSize="32" FontFamily="ZMGB" 
+                HorizontalOptions="Center" />
+            <Label  Text="Google字體 ZenMaruGothic-Regular" 
+                FontSize="32" FontFamily="ZMGR" HorizontalOptions="Center" />
+            <Label  Text="Google字體 RampartOne-Regular"  
+                FontSize="32" FontFamily="ROR" HorizontalOptions="Center" />
+
+            <!-- FontAwesome Icon by Unicode -->
+            <Label Text="&#xf0f3;" FontFamily="FA6FS" FontSize="20" HorizontalOptions="Center"></Label>
+            <Label Text="&#xf17a;" FontFamily="FA6BR" FontSize="20"  HorizontalOptions="Center"></Label>
+
+        </VerticalStackLayout>
+        </Border>
+        
+    </ScrollView>
+
+</ContentPage>
