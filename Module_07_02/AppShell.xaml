@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Module_07_02.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Module_07_02"
+    xmlns:views="clr-namespace:Module_07_02.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Module_07_02">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+    <ShellContent
+        Title="Use Picker"
+        ContentTemplate="{DataTemplate views:UsePicker}"
+        Route="UsePicker" />
+
+    <ShellContent
+        Title="Use Collection View"
+        ContentTemplate="{DataTemplate views:UseCollectionView}"
+        Route="UseCollectionView" />
+
+</Shell>
