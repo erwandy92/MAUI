@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Module_02.MainPage"
+             Title=".NET MAUI vs XAML">
+
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+
+    <StackLayout BackgroundColor="{x:StaticResource SoftBackColor}" Padding="{x:StaticResource PaddingLg}">
+        <Label Text="{x:StaticResource SubTitle}" Style="{StaticResource Header}"></Label>
+        <Label Text="{x:Static sys:Environment.MachineName}"></Label>
+        <Label>
+            <Label.Text>
+                <x:Static Member="sys:Environment.UserName"></x:Static>
+            </Label.Text>
+        </Label>
+        <Button Text="Get OS Version" Clicked="btn_GetOSVersion"></Button>
+        <Label x:Name="lblOSVersion"></Label>
+        
+        <!-- To show the phone type -->
+        <Label Text="{ OnPlatform WinUI='Windows', Android='Android', iOS='iOS'  }"></Label>
+        <Label>
+            <Label.Text>
+                <OnIdiom x:TypeArguments="x:String"
+                         Desktop="Desktop"
+                         Tablet="Tablet"
+                         Phone="Phone">
+                </OnIdiom>
+            </Label.Text>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
